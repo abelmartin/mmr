@@ -11,7 +11,37 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130311041135) do
+ActiveRecord::Schema.define(:version => 20130312055230) do
+
+  create_table "locations", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "address",    :null => false
+    t.string   "latitude"
+    t.string   "longitude"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "gmap_url"
+  end
+
+  add_index "locations", ["user_id"], :name => "index_locations_on_user_id"
+
+  create_table "routes", :force => true do |t|
+    t.integer  "trip_id"
+    t.integer  "start_location_id"
+    t.integer  "end_location_id"
+    t.string   "gmap_url"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "routes", ["trip_id"], :name => "index_routes_on_trip_id"
+
+  create_table "trips", :force => true do |t|
+    t.integer  "user_id"
+    t.datetime "trip_date"
+  end
+
+  add_index "trips", ["user_id"], :name => "index_trips_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "first_name",                             :null => false
