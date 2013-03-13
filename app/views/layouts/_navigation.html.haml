@@ -1,6 +1,7 @@
 .authenticate
   - if current_user
     = "Welcome, #{current_user.first_name.capitalize}"
+    \:
     =link_to 'Logout', destroy_user_session_path, method: :delete
   - else
     = link_to 'Login', new_user_session_path
