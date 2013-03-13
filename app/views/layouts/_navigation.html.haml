@@ -1,5 +1,16 @@
 .authenticate
-  = link_to 'Login', '#'
-  or
-  = link_to 'Sign up', '#'
+  - if current_user
+    = "Welcome, #{current_user.first_name.capitalize}"
+  - else
+    = link_to 'Login', new_user_session_path
+    or
+    = link_to 'Sign up', new_user_registration_path
 = link_to 'My Mileage Report', root_path, :class => 'brand'
+-#- if current_user
+%ul.nav
+  %li
+    %a{href: locations_path} Locations
+  %li
+    %a{href: routes_path} Routes
+  %li
+    %a{href: trips_path} Trips
