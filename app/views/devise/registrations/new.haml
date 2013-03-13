@@ -6,6 +6,14 @@
   = devise_error_messages!
 
   %div
+    = f.label :first_name
+    = f.text_field :first_name, autofocus: true
+
+  %div
+    = f.label :last_name
+    = f.text_field :last_name, autofocus: true
+
+  %div
     = f.label :email
     = f.email_field :email, autofocus: true
 
