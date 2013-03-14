@@ -1,4 +1,6 @@
 Mmr::Application.routes.draw do
+  root to: 'home#index'
+
   resources :routes
 
   resources :trips
@@ -6,6 +8,4 @@ Mmr::Application.routes.draw do
   resources :locations
 
   devise_for :users
-
-  root :to => "home#index"
 end
