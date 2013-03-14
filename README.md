@@ -17,3 +17,6 @@ Something nice to also checkout.
 ```
 %html{'ng-app' => true}
 ```
+
+* Make sure the markup that depends on a controller lives as a child of
+an element with that ``ng-controller`` attribute set.

@@ -1,6 +1,10 @@
 %h2 Locations
 
-%form
-  %input#address_string{'ng-model' => 'newLocation.address'}
-
-\{{newLocation.address}}
+%div{'ng-controller' => 'LocationCtrl'}
+  %form{'ng-submit' => 'addLocation()'}
+    %input#address_string{'ng-model' => 'newLocation.address'}
+    %input.btn.btn-primary{type: 'submit', value: 'add'}
+  %ul
+    %li{'ng-repeat'=>'location in locations',
+      'ng-class' => '{highlight: location == newestLocation}'}
+      \{{location.address}}

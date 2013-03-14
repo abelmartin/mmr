@@ -1,3 +1,11 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+@LocationCtrl = ($scope) ->
+  $scope.locations = [
+    {address: '2919 24th Ave, New York, NY'}
+    {address: '3533 36th St, New York, NY'}
+    {address: '4020 Broadway, Long Island City, NY'}
+  ]
+
+  $scope.addLocation = ->
+    $scope.newestLocation = $scope.newLocation
+    $scope.locations.push($scope.newLocation)
+    $scope.newLocation = {}
