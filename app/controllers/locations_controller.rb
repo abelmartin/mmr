@@ -20,6 +20,6 @@ class LocationsController < ApplicationController
   end
 
   def destroy
-    render :json, Location.destroy.where(user: current_user, id: params[:id])
+    render :json, current_user.locations.find(params[:id]).destroy
   end
 end
