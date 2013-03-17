@@ -6,5 +6,7 @@
     %input.btn.btn-primary{type: 'submit', value: 'add'}
   %ul
     %li{'ng-repeat'=>'location in locations',
-      'ng-class' => '{highlight: location == newestLocation}'}
+      'ng-class' => '{highlight: location == newestLocation}',
+      'ng-dblclick' => 'editLocation()'}
+      %button.btn.btn-danger{'ng-click' => 'deleteLocation()'} Delete
       \{{location.address}}

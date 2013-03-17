@@ -18,5 +18,19 @@ Something nice to also checkout.
 %html{'ng-app' => true}
 ```
 
+# My Assessments.
+
+These may be incorrect, but for now they ring true:
+
 * Make sure the markup that depends on a controller lives as a child of
-an element with that ``ng-controller`` attribute set.
+an element with that ``ng-controller`` attribute set.  Angular appears
+to be all about scoping within your templates.
+
+* Check out and use the ['Batarang' Chrome
+extension](https://github.com/angular/angularjs-batarang). It gives you
+a great way to drill into your angular app to find bugs and ensure
+objects are bound correctly.
+
+* Much like creating a new object and pushing it onto an array your
+scope knows about, you need to explicitily splice deleted objects out of
+your arrays for the DOM to update correctly.

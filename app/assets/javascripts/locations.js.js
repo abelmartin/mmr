@@ -2,7 +2,7 @@
 (function() {
   var app;
 
-  app = angular.module("LocationManager", ['ngResource']);
+  app = angular.module("MMRApp", ['ngResource']);
 
   this.LocationCtrl = function($scope, $resource) {
     var Location;
@@ -14,12 +14,21 @@
       }
     });
     $scope.locations = Location.query();
-    return $scope.addLocation = function() {
+    $scope.addLocation = function() {
       var location;
       location = Location.save($scope.newLocation);
       $scope.newestLocation = location;
       $scope.locations.push(location);
       return $scope.newLocation = {};
+    };
+    $scope.deleteLocation = function() {
+      var loc_index;
+      loc_index = $scope.locations.indexOf(this.location);
+      $scope.locations.splice(loc_index, 1);
+      return this.location.$remove();
+    };
+    return $scope.editLocation = function() {
+      return alert('edits comming soon');
     };
   };
 
