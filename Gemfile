@@ -17,5 +17,7 @@ group :assets do
 end
 
 group :development, :test do
+  gem 'debugger'
   gem 'rspec-rails'
+  gem 'sextant'
 end

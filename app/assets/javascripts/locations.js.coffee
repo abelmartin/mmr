@@ -1,11 +1,11 @@
-@LocationCtrl = ($scope) ->
-  $scope.locations = [
-    {address: '2919 24th Ave, New York, NY'}
-    {address: '3533 36th St, New York, NY'}
-    {address: '4020 Broadway, Long Island City, NY'}
-  ]
+app = angular.module("LocationManager",['ngResource'])
+
+@LocationCtrl = ($scope, $resource) ->
+  Location = $resource('/locations/:id', { id: '@id' }, {update: {method: 'PUT'}})
+  $scope.locations = Location.query()
 
   $scope.addLocation = ->
-    $scope.newestLocation = $scope.newLocation
-    $scope.locations.push($scope.newLocation)
+    location = Location.save($scope.newLocation)
+    $scope.newestLocation = location
+    $scope.locations.push(location)
     $scope.newLocation = {}
