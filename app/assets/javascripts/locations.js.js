@@ -38,6 +38,8 @@
       return this.location.$remove();
     };
     $scope.editLocation = function() {
+      $scope.tempLocation = {};
+      $scope.tempLocation.address = this.location.address;
       return $scope.activeEdit = this.location;
     };
     $scope.cancelEdit = function($event) {
@@ -45,6 +47,7 @@
       return $scope.activeEdit = null;
     };
     return $scope.updateLocation = function() {
+      this.location.address = $scope.tempLocation.address;
       this.location.$update();
       return $scope.activeEdit = null;
     };

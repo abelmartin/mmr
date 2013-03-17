@@ -34,3 +34,7 @@ objects are bound correctly.
 * Much like creating a new object and pushing it onto an array your
 scope knows about, you need to explicitily splice deleted objects out of
 your arrays for the DOM to update correctly.
+
+* I have a strong feeling [AngularUI](http://angular-ui.github.com/) is
+going to play a part in the final implementation. Keyboard bind events
+and GoogleMap integrations could be really cool to use.

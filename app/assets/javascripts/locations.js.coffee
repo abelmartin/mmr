@@ -23,6 +23,8 @@ Always use the CSRF token with requests
     @location.$remove()
 
   $scope.editLocation = ->
+    $scope.tempLocation = {}
+    $scope.tempLocation.address = @location.address
     $scope.activeEdit = @location
 
   $scope.cancelEdit = ($event) ->
@@ -30,5 +32,6 @@ Always use the CSRF token with requests
     $scope.activeEdit = null
 
   $scope.updateLocation = ->
+    @location.address = $scope.tempLocation.address
     @location.$update()
     $scope.activeEdit = null

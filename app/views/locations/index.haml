@@ -3,7 +3,7 @@
 %div{'ng-controller' => 'LocationCtrl'}
   %form{'ng-submit' => 'addLocation()'}
     %input#address_new_string{'ng-model' => 'newLocation.address'}
-    %input.btn.btn-primary{type: 'submit', value: 'add'}
+    %input.btn.btn-primary{type: 'submit', value: 'Add'}
   %ul
     %li{'ng-repeat'=>'location in locations',
       'ng-class' => '{highlight: location == newestLocation}',
@@ -12,6 +12,6 @@
       %span{'ng-show' => 'location != activeEdit'}
         \{{location.address}}
       %form{'ng-submit' => 'updateLocation()', 'ng-show' => 'location == activeEdit'}
-        %input#address_update_string{'ng-model' => 'location.address'}
+        %input#address_update_string{'ng-model' => 'tempLocation.address'}
         %a.btn{'ng-click' => 'cancelEdit($event)', href: '#'} Cancel
-        %input.btn.btn-primary{type: 'submit', value: 'add'}
+        %input.btn.btn-primary{type: 'submit', value: 'Update'}
