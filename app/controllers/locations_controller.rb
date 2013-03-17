@@ -1,6 +1,4 @@
 class LocationsController < ApplicationController
-  skip_before_filter  :verify_authenticity_token
-
   def index
     respond_to do |format|
       format.js{ render json: current_user.locations }
