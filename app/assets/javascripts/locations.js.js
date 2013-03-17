@@ -37,8 +37,16 @@
       $scope.locations.splice(loc_index, 1);
       return this.location.$remove();
     };
-    return $scope.editLocation = function() {
-      return alert('edits comming soon');
+    $scope.editLocation = function() {
+      return $scope.activeEdit = this.location;
+    };
+    $scope.cancelEdit = function($event) {
+      $event.preventDefault();
+      return $scope.activeEdit = null;
+    };
+    return $scope.updateLocation = function() {
+      this.location.$update();
+      return $scope.activeEdit = null;
     };
   };
 

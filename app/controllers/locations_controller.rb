@@ -15,8 +15,10 @@ class LocationsController < ApplicationController
   end
 
   def update
-    location = current_user.locations.find param[:id]
-    render json: location.update( params[:location] )
+    location = current_user.locations.find params[:id]
+    location.address = params[:address]
+    location.save
+    render json: location
   end
 
   def destroy

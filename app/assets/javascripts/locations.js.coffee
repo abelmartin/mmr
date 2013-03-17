@@ -23,4 +23,12 @@ Always use the CSRF token with requests
     @location.$remove()
 
   $scope.editLocation = ->
-    alert 'edits comming soon'
+    $scope.activeEdit = @location
+
+  $scope.cancelEdit = ($event) ->
+    $event.preventDefault()
+    $scope.activeEdit = null
+
+  $scope.updateLocation = ->
+    @location.$update()
+    $scope.activeEdit = null

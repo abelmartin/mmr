@@ -2,11 +2,17 @@
 
 %div{'ng-controller' => 'LocationCtrl'}
   %form{'ng-submit' => 'addLocation()'}
-    %input#address_string{'ng-model' => 'newLocation.address'}
+    %input#address_new_string{'ng-model' => 'newLocation.address'}
     %input.btn.btn-primary{type: 'submit', value: 'add'}
   %ul
     %li{'ng-repeat'=>'location in locations',
       'ng-class' => '{highlight: location == newestLocation}',
       'ng-dblclick' => 'editLocation()'}
       %button.btn.btn-danger{'ng-click' => 'deleteLocation()'} Delete
-      \{{location.address}}
+      %span{'ng-show' => 'location != activeEdit'}
+        \{{location.address}}
+      %form{'ng-submit' => 'updateLocation()', 'ng-show' => 'location == activeEdit'}
+        %input#address_update_string{'ng-model' => 'location.address'}
+        %a.btn{'ng-click' => 'cancelEdit($event)', href: '#'} Cancel
+        %input.btn.btn-primary{type: 'submit', value: 'add'}
+
