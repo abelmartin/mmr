@@ -1,0 +1,173 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?address=1%20infinite%20loop%20cupertino%20ca%2095014&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 19 Mar 2013 06:33:48 GMT
+      Expires:
+      - Wed, 20 Mar 2013 06:33:48 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! "{\n   \"results\" : [\n      {\n         \"address_components\" :
+        [\n            {\n               \"long_name\" : \"1\",\n               \"short_name\"
+        : \"1\",\n               \"types\" : [ \"street_number\" ]\n            },\n
+        \           {\n               \"long_name\" : \"Infinite Loop\",\n               \"short_name\"
+        : \"Infinite Loop\",\n               \"types\" : [ \"route\" ]\n            },\n
+        \           {\n               \"long_name\" : \"Cupertino\",\n               \"short_name\"
+        : \"Cupertino\",\n               \"types\" : [ \"locality\", \"political\"
+        ]\n            },\n            {\n               \"long_name\" : \"Santa Clara\",\n
+        \              \"short_name\" : \"Santa Clara\",\n               \"types\"
+        : [ \"administrative_area_level_2\", \"political\" ]\n            },\n            {\n
+        \              \"long_name\" : \"California\",\n               \"short_name\"
+        : \"CA\",\n               \"types\" : [ \"administrative_area_level_1\", \"political\"
+        ]\n            },\n            {\n               \"long_name\" : \"United
+        States\",\n               \"short_name\" : \"US\",\n               \"types\"
+        : [ \"country\", \"political\" ]\n            },\n            {\n               \"long_name\"
+        : \"95014\",\n               \"short_name\" : \"95014\",\n               \"types\"
+        : [ \"postal_code\" ]\n            }\n         ],\n         \"formatted_address\"
+        : \"1 Infinite Loop, Cupertino, CA 95014, USA\",\n         \"geometry\" :
+        {\n            \"location\" : {\n               \"lat\" : 37.33132140,\n               \"lng\"
+        : -122.0306670\n            },\n            \"location_type\" : \"ROOFTOP\",\n
+        \           \"viewport\" : {\n               \"northeast\" : {\n                  \"lat\"
+        : 37.33267038029150,\n                  \"lng\" : -122.0293180197085\n               },\n
+        \              \"southwest\" : {\n                  \"lat\" : 37.32997241970850,\n
+        \                 \"lng\" : -122.0320159802915\n               }\n            }\n
+        \        },\n         \"types\" : [ \"street_address\" ]\n      },\n      {\n
+        \        \"address_components\" : [\n            {\n               \"long_name\"
+        : \"Apple Campus\",\n               \"short_name\" : \"Apple Campus\",\n               \"types\"
+        : []\n            },\n            {\n               \"long_name\" : \"Apple
+        Inc.\",\n               \"short_name\" : \"Apple Inc.\",\n               \"types\"
+        : [ \"establishment\" ]\n            },\n            {\n               \"long_name\"
+        : \"Cupertino\",\n               \"short_name\" : \"Cupertino\",\n               \"types\"
+        : [ \"locality\", \"political\" ]\n            },\n            {\n               \"long_name\"
+        : \"Santa Clara\",\n               \"short_name\" : \"Santa Clara\",\n               \"types\"
+        : [ \"administrative_area_level_2\", \"political\" ]\n            },\n            {\n
+        \              \"long_name\" : \"California\",\n               \"short_name\"
+        : \"CA\",\n               \"types\" : [ \"administrative_area_level_1\", \"political\"
+        ]\n            },\n            {\n               \"long_name\" : \"United
+        States\",\n               \"short_name\" : \"US\",\n               \"types\"
+        : [ \"country\", \"political\" ]\n            },\n            {\n               \"long_name\"
+        : \"95014\",\n               \"short_name\" : \"95014\",\n               \"types\"
+        : [ \"postal_code\" ]\n            }\n         ],\n         \"formatted_address\"
+        : \"Apple Campus, Apple Inc., Cupertino, CA 95014, USA\",\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.331820,\n               \"lng\"
+        : -122.031180\n            },\n            \"location_type\" : \"APPROXIMATE\",\n
+        \           \"viewport\" : {\n               \"northeast\" : {\n                  \"lat\"
+        : 37.33316898029150,\n                  \"lng\" : -122.0298310197085\n               },\n
+        \              \"southwest\" : {\n                  \"lat\" : 37.33047101970850,\n
+        \                 \"lng\" : -122.0325289802915\n               }\n            }\n
+        \        },\n         \"types\" : []\n      }\n   ],\n   \"status\" : \"OK\"\n}\n"
+    http_version: 
+  recorded_at: Tue, 19 Mar 2013 06:33:48 GMT
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?address=1%20infinite%20loop%20cupertino%20ca%2095014&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 19 Mar 2013 06:33:48 GMT
+      Expires:
+      - Wed, 20 Mar 2013 06:33:48 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: ! "{\n   \"results\" : [\n      {\n         \"address_components\" :
+        [\n            {\n               \"long_name\" : \"1\",\n               \"short_name\"
+        : \"1\",\n               \"types\" : [ \"street_number\" ]\n            },\n
+        \           {\n               \"long_name\" : \"Infinite Loop\",\n               \"short_name\"
+        : \"Infinite Loop\",\n               \"types\" : [ \"route\" ]\n            },\n
+        \           {\n               \"long_name\" : \"Cupertino\",\n               \"short_name\"
+        : \"Cupertino\",\n               \"types\" : [ \"locality\", \"political\"
+        ]\n            },\n            {\n               \"long_name\" : \"Santa Clara\",\n
+        \              \"short_name\" : \"Santa Clara\",\n               \"types\"
+        : [ \"administrative_area_level_2\", \"political\" ]\n            },\n            {\n
+        \              \"long_name\" : \"California\",\n               \"short_name\"
+        : \"CA\",\n               \"types\" : [ \"administrative_area_level_1\", \"political\"
+        ]\n            },\n            {\n               \"long_name\" : \"United
+        States\",\n               \"short_name\" : \"US\",\n               \"types\"
+        : [ \"country\", \"political\" ]\n            },\n            {\n               \"long_name\"
+        : \"95014\",\n               \"short_name\" : \"95014\",\n               \"types\"
+        : [ \"postal_code\" ]\n            }\n         ],\n         \"formatted_address\"
+        : \"1 Infinite Loop, Cupertino, CA 95014, USA\",\n         \"geometry\" :
+        {\n            \"location\" : {\n               \"lat\" : 37.33132140,\n               \"lng\"
+        : -122.0306670\n            },\n            \"location_type\" : \"ROOFTOP\",\n
+        \           \"viewport\" : {\n               \"northeast\" : {\n                  \"lat\"
+        : 37.33267038029150,\n                  \"lng\" : -122.0293180197085\n               },\n
+        \              \"southwest\" : {\n                  \"lat\" : 37.32997241970850,\n
+        \                 \"lng\" : -122.0320159802915\n               }\n            }\n
+        \        },\n         \"types\" : [ \"street_address\" ]\n      },\n      {\n
+        \        \"address_components\" : [\n            {\n               \"long_name\"
+        : \"Apple Campus\",\n               \"short_name\" : \"Apple Campus\",\n               \"types\"
+        : []\n            },\n            {\n               \"long_name\" : \"Apple
+        Inc.\",\n               \"short_name\" : \"Apple Inc.\",\n               \"types\"
+        : [ \"establishment\" ]\n            },\n            {\n               \"long_name\"
+        : \"Cupertino\",\n               \"short_name\" : \"Cupertino\",\n               \"types\"
+        : [ \"locality\", \"political\" ]\n            },\n            {\n               \"long_name\"
+        : \"Santa Clara\",\n               \"short_name\" : \"Santa Clara\",\n               \"types\"
+        : [ \"administrative_area_level_2\", \"political\" ]\n            },\n            {\n
+        \              \"long_name\" : \"California\",\n               \"short_name\"
+        : \"CA\",\n               \"types\" : [ \"administrative_area_level_1\", \"political\"
+        ]\n            },\n            {\n               \"long_name\" : \"United
+        States\",\n               \"short_name\" : \"US\",\n               \"types\"
+        : [ \"country\", \"political\" ]\n            },\n            {\n               \"long_name\"
+        : \"95014\",\n               \"short_name\" : \"95014\",\n               \"types\"
+        : [ \"postal_code\" ]\n            }\n         ],\n         \"formatted_address\"
+        : \"Apple Campus, Apple Inc., Cupertino, CA 95014, USA\",\n         \"geometry\"
+        : {\n            \"location\" : {\n               \"lat\" : 37.331820,\n               \"lng\"
+        : -122.031180\n            },\n            \"location_type\" : \"APPROXIMATE\",\n
+        \           \"viewport\" : {\n               \"northeast\" : {\n                  \"lat\"
+        : 37.33316898029150,\n                  \"lng\" : -122.0298310197085\n               },\n
+        \              \"southwest\" : {\n                  \"lat\" : 37.33047101970850,\n
+        \                 \"lng\" : -122.0325289802915\n               }\n            }\n
+        \        },\n         \"types\" : []\n      }\n   ],\n   \"status\" : \"OK\"\n}\n"
+    http_version: 
+  recorded_at: Tue, 19 Mar 2013 06:33:48 GMT
+recorded_with: VCR 2.4.0
