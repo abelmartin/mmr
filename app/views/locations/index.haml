@@ -11,6 +11,10 @@
       %button.btn.btn-danger{'ng-click' => 'deleteLocation()'} Delete
       %span{'ng-show' => 'location != activeEdit'}
         \{{location.address}}
+        %a{href: '{{location.gmap_url}}', target: '_blank' }
+          [ map
+          %i.icon-map-marker
+          \]
       %form{'ng-submit' => 'updateLocation()', 'ng-show' => 'location == activeEdit'}
         %input#address_update_string{'ng-model' => 'tempLocation.address'}
         %a.btn{'ng-click' => 'cancelEdit($event)', href: '#'} Cancel

@@ -1,7 +1,7 @@
 class Location < ActiveRecord::Base
   belongs_to :user
   attr_accessible :address, :gmap_url, :coordinates
-  before_save :set_coordinates #, :set_gmap_url
+  before_save :set_coordinates, :set_gmap_url
 
   private
 
@@ -16,5 +16,9 @@ class Location < ActiveRecord::Base
           map{|k,v| v}.join(', ')
       end
     end
+  end
+
+  def set_gmap_url
+    self.gmap_url = "https://maps.google.com/maps?q=#{coordinates}"
   end
 end
