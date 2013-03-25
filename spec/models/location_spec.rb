@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 describe Location do
-  describe "#save", vcr: {cassette_name: 'geolocate'} do
-    let(:location){ FactoryGirl.create :location }
+  describe "#save", vcr: {cassette_name: 'geolocate', match_requests_on: [:host, :path]} do
+    let(:location){ FactoryGirl.build :location }
 
     context "when coordinates are null" do
-      before{ location.update_attributes coordinates: nil }
+      before{ location.coordinates = nil }
 
       it "sets coordinates from Google Map API" do
         location.save
@@ -14,7 +14,7 @@ describe Location do
     end
 
     context "when gmap_url is null" do
-      before{ location.update_attributes gmap_url: nil }
+      before{ location.gmap_url = nil }
 
       it "saves a google maps url" do
         location.save

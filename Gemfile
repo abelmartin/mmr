@@ -19,12 +19,14 @@ end
 
 group :development, :test do
   gem 'debugger'
+  gem 'faker', '1.1.2'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'rspec-rails'
   gem 'sextant'
 end
 
 group :test do
-  gem 'webmock', '1.11'
+  gem 'capybara', '2.0.2'
   gem 'vcr', '~> 2.4.0'
+  gem 'webmock', '1.8'
 end

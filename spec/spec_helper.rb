@@ -4,6 +4,8 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 require 'webmock/rspec'
+require 'capybara/rails'
+require 'capybara/rspec'
 require 'factory_girl'
 require 'vcr'
 
@@ -20,3 +22,5 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 end
+
+WebMock.disable_net_connect!(:allow_localhost => true)
