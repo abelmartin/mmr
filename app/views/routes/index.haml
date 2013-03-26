@@ -1,1 +1,23 @@
 %h2 Routes
+
+%div{'ng-controller' => 'RoutesCtrl'}
+  %form{'ng-submit' => 'addRoutes()'}
+    %label{ for: 'start_location_id' } Start:
+    %select#starting_id
+      %option{'ng-repeat' => 'location in locations', value: '{{location.id}}'}
+        \{{location.address}}
+    %label{ for: 'end_location_id' } end:
+    %select#ending_id
+      %option{'ng-repeat' => 'location in locations', value: '{{location.id}}'}
+        \{{location.address}}
+    %input.btn.btn-primary{type: 'submit', value: 'Add'}
+  %ul
+    %li{'ng-repeat'=>'route in route',
+      'ng-dblclick' => 'editLocation()'}
+      %button.btn.btn-danger{'ng-click' => 'deleteRoute()'} Delete
+      %span{'ng-show' => 'location != activeEdit'}
+        \{{location.address}}
+        %a{href: '{{location.gmap_url}}', target: '_blank' }
+          [ map
+          %i.icon-map-marker
+          \]

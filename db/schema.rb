@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130318022454) do
+ActiveRecord::Schema.define(:version => 20130325053720) do
 
   create_table "locations", :force => true do |t|
     t.integer  "user_id"
@@ -29,9 +29,11 @@ ActiveRecord::Schema.define(:version => 20130318022454) do
     t.integer  "start_location_id"
     t.integer  "end_location_id"
     t.string   "gmap_url"
-    t.datetime "created_at",                       :null => false
-    t.datetime "updated_at",                       :null => false
-    t.integer  "order",             :default => 0, :null => false
+    t.datetime "created_at",                                                      :null => false
+    t.datetime "updated_at",                                                      :null => false
+    t.integer  "order",                                            :default => 0, :null => false
+    t.decimal  "distance_in_miles",  :precision => 2, :scale => 0, :default => 0, :null => false
+    t.integer  "distance_in_meters",                               :default => 0, :null => false
   end
 
   add_index "routes", ["trip_id"], :name => "index_routes_on_trip_id"
