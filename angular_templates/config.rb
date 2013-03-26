@@ -46,12 +46,15 @@
 #     "Helping"
 #   end
 # end
+set :build_dir, '../public/angular_templates'
 
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+#disable :layout
 
 # Build-specific configuration
 configure :build do
