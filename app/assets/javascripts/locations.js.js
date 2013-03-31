@@ -9,10 +9,11 @@
   */
 
 
-  app.config(["$httpProvider", function(provider) {
-  provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
-}]);;
-
+  app.config([
+    '$httpProvider', function(provider) {
+      return provider.defaults.header.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
+    }
+  ]);
 
   this.LocationCtrl = function($scope, $resource) {
     var Location;

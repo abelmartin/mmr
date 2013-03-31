@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   has_many :locations
+  has_many :trips
+  has_many :routes, through: :trips
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :email, :first_name, :last_name
 end

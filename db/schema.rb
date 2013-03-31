@@ -11,15 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130325053720) do
+ActiveRecord::Schema.define(:version => 20130331195756) do
 
   create_table "locations", :force => true do |t|
     t.integer  "user_id"
-    t.string   "address",     :null => false
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string   "address",                        :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.string   "gmap_url"
     t.string   "coordinates"
+    t.boolean  "hq",          :default => false, :null => false
   end
 
   add_index "locations", ["user_id"], :name => "index_locations_on_user_id"
