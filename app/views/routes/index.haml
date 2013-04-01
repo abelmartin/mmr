@@ -2,8 +2,10 @@
 
 %div{'ng-controller' => 'RouteCtrl'}
   %form{'ng-submit' => 'addRoutes()'}
-    %label Date & Time:
-    %input{type: 'datetime'}
+    %label Date
+    %input{type: 'date', value: "#{ Date.today }"}
+    %label Time
+    %input{type: 'time', value: "#{ Time.now.strftime '%H:%M' }"}
     = render partial: 'route_selector', locals:{ label_text: 'Start:'}
     = render partial: 'route_selector', locals:{ label_text: 'End:'}
     %input.btn.btn-primary{type: 'submit', value: 'Add'}
