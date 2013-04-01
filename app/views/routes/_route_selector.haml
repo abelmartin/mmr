@@ -1,0 +1,7 @@
+%label= label_text
+%select
+  %option Select A Location
+  %option{'ng-repeat' => 'location in locations',
+  value: '{{location.id}}',
+  'ng-selected' => 'location.hq == true'}
+    \{{location.address}}

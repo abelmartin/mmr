@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe Route do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  it "saves the current date for trip_datetime if nil" do
+    pending
+  end
 end

@@ -2,8 +2,10 @@
 
 %div{'ng-controller' => 'RouteCtrl'}
   %form{'ng-submit' => 'addRoutes()'}
-    = render partial: 'shared/route_selector', locals:{ label_text: 'Start:'}
-    = render partial: 'shared/route_selector', locals:{ label_text: 'End:'}
+    %label Date & Time:
+    %input{type: 'datetime'}
+    = render partial: 'route_selector', locals:{ label_text: 'Start:'}
+    = render partial: 'route_selector', locals:{ label_text: 'End:'}
     %input.btn.btn-primary{type: 'submit', value: 'Add'}
   %ul
     %li{'ng-repeat'=>'route in routes',
