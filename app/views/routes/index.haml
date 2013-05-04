@@ -8,6 +8,7 @@
     %input{type: 'time', value: "#{ Time.now.strftime '%H:%M' }"}
     = render partial: 'route_selector', locals:{ label_text: 'Start:'}
     = render partial: 'route_selector', locals:{ label_text: 'End:'}
+    %br/
     %input.btn.btn-primary{type: 'submit', value: 'Add'}
   %ul
     %li{'ng-repeat'=>'route in routes',

@@ -19,6 +19,8 @@ group :assets do
 end
 
 group :development, :test do
+  gem 'pry'
+  gem 'pry-plus'
   gem 'debugger'
   gem 'faker', '1.1.2'
   gem 'factory_girl_rails', '~> 4.0'

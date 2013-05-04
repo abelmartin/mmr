@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    :css
+      body {padding: 20px;}
+  %body
+    %div{'ng-app' => ''}
+      %input{type: 'text', 'ng-model' => 'data.message'}
+      %h1 {{data.message}}
+      %div{'ng-controller' => 'FirstCtrl'}
+        %h1 {{data.message + " world"}}
+    %script{src: 'javascripts/example.js'}
+    %script{src: '/assets/angular.js'}
