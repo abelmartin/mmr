@@ -7,7 +7,14 @@
     %div{'ng-app' => ''}
       %input{type: 'text', 'ng-model' => 'data.message'}
       %h1 {{data.message}}
+
       %div{'ng-controller' => 'FirstCtrl'}
-        %h1 {{data.message + " world"}}
+        %input{type: 'text', 'ng-model' => 'data.message'}
+        %h1 {{data.message}}
+
+      %div{'ng-controller' => 'SecondCtrl'}
+        %input{type: 'text', 'ng-model' => 'data.message'}
+        %h1 {{data.message}}
+
     %script{src: 'javascripts/example.js'}
     %script{src: '/assets/angular.js'}
