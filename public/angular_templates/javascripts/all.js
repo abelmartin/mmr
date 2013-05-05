@@ -14,7 +14,10 @@
   };
 
   this.SecondCtrl = function($scope, Data) {
-    return $scope.data = Data;
+    $scope.data = Data;
+    return $scope.reversedMessage = function(msg) {
+      return msg.split(" ").reverse().join(" ");
+    };
   };
 
 }).call(this);
@@ -35,7 +38,10 @@
   };
 
   this.SecondCtrl = function($scope, Data) {
-    return $scope.data = Data;
+    $scope.data = Data;
+    return $scope.reversedMessage = function(msg) {
+      return msg.split(" ").reverse().join(" ");
+    };
   };
 
 }).call(this);

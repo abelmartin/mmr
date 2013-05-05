@@ -14,7 +14,8 @@
 
       %div{'ng-controller' => 'SecondCtrl'}
         %input{type: 'text', 'ng-model' => 'data.message'}
-        %h1 {{data.message}}
+        -#%h1 {{reversedMessage()}}
+        %h1 {{reversedMessage(data.message)}}
 
     %script{src: '/assets/angular.js'}
     %script{src: 'javascripts/example.js'}

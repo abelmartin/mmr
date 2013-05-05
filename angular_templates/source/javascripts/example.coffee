@@ -7,3 +7,7 @@ myApp.factory 'Data', ->
 
 @SecondCtrl = ($scope, Data) ->
   $scope.data = Data
+  #$scope.reversedMessage = ->
+    #$scope.data.message.split(" ").reverse().join(" ")
+  $scope.reversedMessage = (msg) ->
+    msg.split(" ").reverse().join(" ")
