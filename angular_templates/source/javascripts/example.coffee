@@ -2,9 +2,9 @@ myApp = angular.module('myApp', [])
 myApp.factory 'Data', ->
   message: "I'm data from a service"
 
-myApp.filter 'reverse', ->
+myApp.filter 'reverse', (Data) ->
   (text) ->
-    text.split(" ").reverse().join(" ")
+    text.split(" ").reverse().join(" ") + Data.message
 
 @FirstCtrl = ($scope, Data) ->
   $scope.data = Data
