@@ -9,6 +9,12 @@
     };
   });
 
+  myApp.filter('reverse', function() {
+    return function(text) {
+      return text.split(" ").reverse().join(" ");
+    };
+  });
+
   this.FirstCtrl = function($scope, Data) {
     return $scope.data = Data;
   };
@@ -30,6 +36,12 @@
   myApp.factory('Data', function() {
     return {
       message: "I'm data from a service"
+    };
+  });
+
+  myApp.filter('reverse', function() {
+    return function(text) {
+      return text.split(" ").reverse().join(" ");
     };
   });
 
