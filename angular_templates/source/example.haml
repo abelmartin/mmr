@@ -3,19 +3,18 @@
   %head
     :css
       body {padding: 20px;}
+      input[type='text'] {width: 200px;}
 
   %body
-    %div{'ng-app' => ''}
-      %input{type: 'text', 'ng-model' => 'message'}
-      %h1 {{message}}
+    %div{'ng-app' => 'myApp'}
 
       %div{'ng-controller' => 'FirstCtrl'}
-        %input{type: 'text', 'ng-model' => 'message'}
-        %h1 {{message}}
+        %input{type: 'text', 'ng-model' => 'data.message'}
+        %h1 {{data.message}}
 
       %div{'ng-controller' => 'SecondCtrl'}
-        %input{type: 'text', 'ng-model' => 'message'}
-        %h1 {{message}}
+        %input{type: 'text', 'ng-model' => 'data.message'}
+        %h1 {{data.message}}
 
-    %script{src: 'javascripts/example.js'}
     %script{src: '/assets/angular.js'}
+    %script{src: 'javascripts/example.js'}

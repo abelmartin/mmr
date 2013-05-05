@@ -3,22 +3,21 @@
   <head>
     <style>
       body {padding: 20px;}
+      input[type='text'] {width: 200px;}
     </style>
   </head>
   <body>
-    <div ng-app=''>
-      <input ng-model='message' type='text'>
-      <h1>{{message}}</h1>
+    <div ng-app='myApp'>
       <div ng-controller='FirstCtrl'>
-        <input ng-model='message' type='text'>
-        <h1>{{message}}</h1>
+        <input ng-model='data.message' type='text'>
+        <h1>{{data.message}}</h1>
       </div>
       <div ng-controller='SecondCtrl'>
-        <input ng-model='message' type='text'>
-        <h1>{{message}}</h1>
+        <input ng-model='data.message' type='text'>
+        <h1>{{data.message}}</h1>
       </div>
     </div>
-    <script src='javascripts/example.js'></script>
     <script src='/assets/angular.js'></script>
+    <script src='javascripts/example.js'></script>
   </body>
 </html>
