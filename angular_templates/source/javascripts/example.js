@@ -4,6 +4,57 @@
 
   myApp = angular.module('myApp', []);
 
+  myApp.factory('Avengers', function() {
+    var Avengers;
+    Avengers = {};
+    Avengers.cast = [
+      {
+        "name": "Isabelle Creighton",
+        "character": "Qualserve"
+      }, {
+        "name": "Nevaeh Young",
+        "character": "Westgate"
+      }, {
+        "name": "Zoe Carter",
+        "character": "Thermotomic"
+      }, {
+        "name": "Alexa Thomson",
+        "character": "Teratopia"
+      }, {
+        "name": "Sophie Adamson",
+        "character": "Rapigrafix"
+      }, {
+        "name": "Gianna WifKinson",
+        "character": "Thermotomic"
+      }, {
+        "name": "Gabrielle Campbell",
+        "character": "US Omnigraphik"
+      }, {
+        "name": "Paige Gardner",
+        "character": "Entcast"
+      }, {
+        "name": "Jessica Hodges",
+        "character": "Conotomics"
+      }, {
+        "name": "Elizabeth White",
+        "character": "Textiqua"
+      }, {
+        "name": "Ariana Vance",
+        "character": "Transtouch"
+      }, {
+        "name": "Natalie Gate",
+        "character": "Idmax"
+      }, {
+        "name": "Andrea Hardman",
+        "character": "Rapigrafix"
+      }, {
+        "name": "Madison WifKinson",
+        "character": "Openserve"
+      }
+    ];
+    return Avengers;
+  });
+
   myApp.factory('Data', function() {
     return {
       message: "I'm data from a service"
@@ -25,6 +76,10 @@
     return $scope.reversedMessage = function(msg) {
       return msg.split(" ").reverse().join(" ");
     };
+  };
+
+  this.AvengersCtrl = function($scope, Avengers) {
+    return $scope.avengers = Avengers;
   };
 
 }).call(this);

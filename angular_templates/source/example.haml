@@ -4,6 +4,7 @@
     :css
       body {padding: 20px;}
       input[type='text'] {width: 200px;}
+      td {width: 200px; padding: 15px 10px 0 0; border-bottom: 1px solid blue;}
 
   %body
     %div{'ng-app' => 'myApp'}
@@ -15,6 +16,14 @@
       %div{'ng-controller' => 'SecondCtrl'}
         %input{type: 'text', 'ng-model' => 'data.message'}
         %h1 {{data.message|reverse}}
+
+      %div{'ng-controller' => 'AvengersCtrl'}
+        %h1 Avengers
+        %input{type: 'text', 'ng-model' => 'searchText'}
+        %table
+          %tr{'ng-repeat' => 'actor in avengers.cast | filter:searchText'}
+            %td {{actor.name}}
+            %td {{actor.character}}
 
     %script{src: '/assets/angular.js'}
     %script{src: 'javascripts/example.js'}

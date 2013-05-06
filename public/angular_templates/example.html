@@ -4,6 +4,7 @@
     <style>
       body {padding: 20px;}
       input[type='text'] {width: 200px;}
+      td {width: 200px; padding: 15px 10px 0 0; border-bottom: 1px solid blue;}
     </style>
   </head>
   <body>
@@ -15,6 +16,16 @@
       <div ng-controller='SecondCtrl'>
         <input ng-model='data.message' type='text'>
         <h1>{{data.message|reverse}}</h1>
+      </div>
+      <div ng-controller='AvengersCtrl'>
+        <h1>Avengers</h1>
+        <input ng-model='searchText' type='text'>
+        <table>
+          <tr ng-repeat='actor in avengers.cast | filter:searchText'>
+            <td>{{actor.name}}</td>
+            <td>{{actor.character}}</td>
+          </tr>
+        </table>
       </div>
     </div>
     <script src='/assets/angular.js'></script>
