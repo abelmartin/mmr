@@ -78,7 +78,11 @@
     };
   };
 
-  this.AvengersCtrl = function($scope, Avengers) {
+  this.AvengersFullCtrl = function($scope, Avengers) {
+    return $scope.avengers = Avengers;
+  };
+
+  this.AvengersPartialCtrl = function($scope, Avengers) {
     return $scope.avengers = Avengers;
   };
 

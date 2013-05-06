@@ -78,5 +78,8 @@ myApp.filter 'reverse', (Data) ->
   $scope.reversedMessage = (msg) ->
     msg.split(" ").reverse().join(" ")
 
-@AvengersCtrl = ($scope, Avengers) ->
+@AvengersFullCtrl = ($scope, Avengers) ->
+  $scope.avengers = Avengers
+
+@AvengersPartialCtrl = ($scope, Avengers) ->
   $scope.avengers = Avengers

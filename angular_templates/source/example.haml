@@ -5,6 +5,10 @@
       body {padding: 20px;}
       input[type='text'] {width: 200px;}
       td {width: 200px; padding: 15px 10px 0 0; border-bottom: 1px solid blue;}
+      hr {clear: both; margin: 15px 0;}
+      table {margin-bottom: 10px; border: solid 1px orange;}
+      .left {float: left; background-color: #ffa;}
+      .right {float: right; background-color: #faf;}
 
   %body
     %div{'ng-app' => 'myApp'}
@@ -17,13 +21,26 @@
         %input{type: 'text', 'ng-model' => 'data.message'}
         %h1 {{data.message|reverse}}
 
-      %div{'ng-controller' => 'AvengersCtrl'}
-        %h1 Avengers
-        %input{type: 'text', 'ng-model' => 'searchText'}
+      %hr
+
+      %h1 Data Avengers
+      .left{'ng-controller' => 'AvengersFullCtrl'}
+        %h2 Search by Anything
+        %input{type: 'text', 'ng-model' => 'search.$'}
         %table
-          %tr{'ng-repeat' => 'actor in avengers.cast | filter:searchText'}
+          %tr{'ng-repeat' => 'actor in avengers.cast | filter:search'}
             %td {{actor.name}}
             %td {{actor.character}}
+
+      .right{'ng-controller' => 'AvengersPartialCtrl'}
+        %h2 Search by Name
+        %input{type: 'text', 'ng-model' => 'search.name'}
+        %table
+          %tr{'ng-repeat' => 'actor in avengers.cast | filter:search'}
+            %td {{actor.name}}
+            %td {{actor.character}}
+
+      %hr
 
     %script{src: '/assets/angular.js'}
     %script{src: 'javascripts/example.js'}
