@@ -81,5 +81,5 @@ myApp.filter 'reverse', (Data) ->
 @AvengersFullCtrl = ($scope, Avengers) ->
   $scope.avengers = Avengers
 
-@AvengersPartialCtrl = ($scope, Avengers) ->
+@AvengersFullCtrl = ($scope, Avengers) ->
   $scope.avengers = Avengers
