@@ -11,4 +11,22 @@
     };
   });
 
+  app.directive('flash', function() {
+    return {
+      restrict: 'A',
+      link: function() {
+        return alert("I'm working");
+      }
+    };
+  });
+
+  app.directive('batman', function() {
+    return {
+      restrict: 'C',
+      link: function() {
+        return console.log("I'm Batman");
+      }
+    };
+  });
+
 }).call(this);
