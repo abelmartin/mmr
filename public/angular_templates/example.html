@@ -27,7 +27,7 @@
         <h2>Search by Anything</h2>
         <input ng-model='search.$' type='text'>
         <table>
-          <tr ng-repeat='actor in avengers.cast | orderBy: "-name" | limitTo:7'>
+          <tr ng-repeat='actor in avengers.cast | orderBy: "-name" | limitTo:7 | filter:search'>
             <td>{{actor.name | lowercase}}</td>
             <td>{{actor.character | uppercase}}</td>
           </tr>

@@ -67,23 +67,23 @@
     };
   });
 
-  this.FirstCtrl = function($scope, Data) {
+  myApp.controller('FirstCtrl', function($scope, Data) {
     return $scope.data = Data;
-  };
+  });
 
-  this.SecondCtrl = function($scope, Data) {
+  myApp.controller('SecondCtrl', function($scope, Data) {
     $scope.data = Data;
     return $scope.reversedMessage = function(msg) {
       return msg.split(" ").reverse().join(" ");
     };
-  };
+  });
 
-  this.AvengersFullCtrl = function($scope, Avengers) {
+  myApp.controller('AvengersFullCtrl', function($scope, Avengers) {
     return $scope.avengers = Avengers;
-  };
+  });
 
-  this.AvengersFullCtrl = function($scope, Avengers) {
+  myApp.controller('AvengersPartialCtrl', function($scope, Avengers) {
     return $scope.avengers = Avengers;
-  };
+  });
 
 }).call(this);

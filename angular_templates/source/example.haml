@@ -30,7 +30,7 @@
         %table
           -#%tr{'ng-repeat' => 'actor in avengers.cast | filter:search'}
           -#%tr{'ng-repeat' => 'actor in avengers.cast | orderBy: "-name"'}
-          %tr{'ng-repeat' => 'actor in avengers.cast | orderBy: "-name" | limitTo:7'}
+          %tr{'ng-repeat' => 'actor in avengers.cast | orderBy: "-name" | limitTo:7 | filter:search'}
             %td {{actor.name | lowercase}}
             %td {{actor.character | uppercase}}
 

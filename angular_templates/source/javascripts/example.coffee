@@ -70,16 +70,16 @@ myApp.filter 'reverse', (Data) ->
   (text) ->
     text.split(" ").reverse().join(" ") + Data.message
 
-@FirstCtrl = ($scope, Data) ->
+myApp.controller 'FirstCtrl',  ($scope, Data) ->
   $scope.data = Data
 
-@SecondCtrl = ($scope, Data) ->
+myApp.controller 'SecondCtrl',  ($scope, Data) ->
   $scope.data = Data
   $scope.reversedMessage = (msg) ->
     msg.split(" ").reverse().join(" ")
 
-@AvengersFullCtrl = ($scope, Avengers) ->
+myApp.controller 'AvengersFullCtrl', ($scope, Avengers) ->
   $scope.avengers = Avengers
 
-@AvengersFullCtrl = ($scope, Avengers) ->
+myApp.controller 'AvengersPartialCtrl', ($scope, Avengers) ->
   $scope.avengers = Avengers
