@@ -12,7 +12,7 @@ gem 'pg'
 gem 'therubyracer', :group => :assets, :platform => :ruby
 
 group :assets do
-  gem 'angularjs-rails', '~> 1.0.5'
+  gem 'angularjs-rails', '~> 1.0.7'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'uglifier', '>= 1.0.3'
@@ -24,6 +24,7 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.0'
   gem 'rspec-rails'
   gem 'sextant'
+  gem 'teaspoon'
 end
 
 group :test do

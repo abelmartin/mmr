@@ -5,5 +5,7 @@ Mmr::Application.routes.draw do
 
   resources :locations
 
+  resources :trips
+
   devise_for :users
 end
