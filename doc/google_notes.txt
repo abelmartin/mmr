@@ -1,0 +1,8 @@
+Some gmaps data I was working with.
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=37.3313214,+-122.030667&amp;aq=&amp;sll=40.751402,-73.940008&amp;sspn=0.011102,0.022638&amp;ie=UTF8&amp;ll=37.331321,-122.030667&amp;spn=0.011653,0.022638&amp;t=m&amp;z=14&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=37.3313214,+-122.030667&amp;aq=&amp;sll=40.751402,-73.940008&amp;sspn=0.011102,0.022638&amp;ie=UTF8&amp;ll=37.331321,-122.030667&amp;spn=0.011653,0.022638&amp;t=m&amp;z=14" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+
+---
+
+https://maps.google.com/maps?q=37.331321,-122.030667&hl=en&sll=40.697488,-73.979681&sspn=0.71112,1.448822&t=m&z=16
+
+https://maps.google.com/maps?q=37.331321,-122.030667

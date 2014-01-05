@@ -13,7 +13,7 @@ gem 'therubyracer', :group => :assets, :platform => :ruby
 gem 'rake'
 
 group :assets do
-  gem 'angularjs-rails', '~> 1.0.7'
+  gem 'angularjs-rails', '1.2.5'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'uglifier', '>= 1.0.3'
